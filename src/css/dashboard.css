@@ -1,0 +1,178 @@
+.dashboard .statistic {
+  display: flex;
+  flex: 1;
+  gap: 12px;
+}
+
+.dashboard .statistic .card {
+  max-height: 199px;
+}
+
+.dashboard .total-sales {
+  max-width: 398px;
+  display: flex;
+  padding: 20px 20px 28px 20px;
+}
+
+.dashboard .total-sales .card-img-wrapper {
+  padding: 34px 39px;
+  margin-right: 33px;
+  border-right: 1px solid #dbdade;
+}
+
+.dashboard .total-sales .card-img-wrapper .img-box {
+  width: 73px;
+  height: 73px;
+}
+
+.dashboard .total-sales .card-title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+  margin-bottom: 4px;
+}
+
+.dashboard .total-sales .card-content span {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--gray);
+}
+
+.dashboard .total-sales h3 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-top: 30px;
+  margin-bottom: 16px;
+}
+
+.dashboard .total-sales .card-description {
+  color: var(--gray);
+}
+
+.dashboard .total-sales .card-description span {
+  color: var(--green);
+  display: inline-flex;
+  align-items: center;
+  transform: translateY(3px);
+}
+
+.dashboard .total-profit {
+  padding: 21px 0 24px 24px;
+  max-width: 242px;
+}
+
+.dashboard .total-profit .card-img-wrapper {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.dashboard .total-profit .card-img-wrapper .img-box {
+  width: 43px;
+  height: 43px;
+  margin-right: 22px;
+}
+
+.dashboard .total-profit .title-wrapper p {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.dashboard .total-profit .title-wrapper span {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--gray);
+}
+
+.dashboard .total-profit .card-content h3 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 16px;
+}
+
+.dashboard .total-profit .card-content p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--gray);
+}
+
+.dashboard .total-profit .card-content p span {
+  color: var(--green);
+  display: inline-flex;
+  align-items: center;
+  transform: translateY(3px);
+}
+
+.dashboard .countries {
+  padding: 24px;
+}
+
+.dashboard .countries ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.dashboard .countries .img-box {
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.dashboard .countries .stat p {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 21px;
+}
+
+.dashboard .countries .stat .country {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--gray);
+  margin-right: 16px;
+  min-width: 83px;
+}
+
+.dashboard .countries .stat-bar {
+  background: var(--bluish-gray);
+  width: 100%;
+  height: 6px;
+  border-radius: 10px;
+  position: relative;
+  margin-right: 16px;
+  flex: 1;
+}
+
+.dashboard .countries .stat-bar::after {
+  content: "";
+  background: var(--primary-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  height: 100%;
+  width: 50%;
+  z-index: 2;
+}
+
+.dashboard .countries .status p {
+  display: flex;
+  align-items: center;
+  transform: translateY(2px);
+}
+
+.dashboard .countries .status p.increase {
+  color: var(--green);
+}
+
+.dashboard .countries .status p.decrease {
+  color: var(--red);
+}

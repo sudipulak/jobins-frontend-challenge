@@ -1,0 +1,92 @@
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background: var(--white);
+  margin-right: 26px;
+}
+
+.sidebar.hide {
+  width: 85px;
+}
+
+.sidebar .logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 14px 20px 18px;
+}
+
+.sidebar .logo-wrapper .logo {
+  display: flex;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--dark);
+}
+.sidebar.hide .logo-wrapper .logo span {
+  font-size: 0;
+}
+
+.sidebar .logo-wrapper .logo img {
+  margin-right: 10px;
+}
+
+.sidebar .logo-wrapper .menu-toggler {
+  cursor: pointer;
+}
+
+.sidebar.hide .logo-wrapper .menu-toggler img {
+  transform: rotateY(180deg) translateX(-5px);
+}
+
+.sidebar ul li {
+  margin: 4px 14px;
+}
+
+.sidebar ul li a {
+  line-height: 22px;
+  padding: 9px 16px;
+  display: flex;
+  color: var(--gray);
+  border-radius: 6px;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  font-weight: 600;
+  color: var(--dark);
+  background: #f3f4f8;
+}
+
+.sidebar ul li span.title {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 14px;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+.sidebar.hide ul li span.title {
+  display: none;
+}
+
+.sidebar.hide ul li span {
+  font-size: 0;
+}
+
+.sidebar ul li svg {
+  margin-right: 8px;
+}
+.sidebar.hide ul li svg {
+  margin-right: 0;
+}
+
+.sidebar ul li svg * {
+  stroke: var(--gray);
+}
+
+.sidebar ul li a:hover svg *,
+.sidebar ul li a.active svg * {
+  stroke: var(--dark);
+}

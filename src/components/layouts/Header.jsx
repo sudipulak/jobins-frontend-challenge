@@ -1,9 +1,14 @@
-import BellImg from '../../assets/Bell.svg'
+import { useLocation } from "react-router-dom"
+import BellImg from '@/assets/Bell.svg'
 
 const Header = () => {
+    const location = useLocation();
+    const path = location.pathname.split('-').join(' ')
+    const pageTitle = path.charAt(1).toUpperCase() + path.slice(2);
+
     return (
         <header>
-            <h1>Dashboard</h1>
+            <h1>{location.pathname === '/' ? 'Dashboard' : pageTitle}</h1>
             <div className="profile-box">
                 <div className="notification">
                     <img src={BellImg} alt="" />
