@@ -99,6 +99,48 @@ const Dashboard = () => {
                     </ul>
                 </div>
             </div>
+            <div className="info card">
+                <div className="personal-information">
+                    <div className='profile'>
+                        <div className="img-box"></div>
+                        <div className="description">
+                            <h3>Robert Fox</h3>
+                            <p>robert@gmail.com</p>
+                        </div>
+                    </div>
+                    <div className='information'>
+                        <p>PERSONAL INFORMATION</p>
+                        <p><span>Contact Number</span><b>(201) 555-0124</b></p>
+                        <p><span>Date of Birth</span><b>1 Jan, 1985</b></p>
+                        <p><span>Member Since</span><b>3 March, 2023</b></p>
+                    </div>
+                    <div className='shipping'>
+                        <p className='title'>Shipping Address</p>
+                        <p>3517 W. Gray St. Utica, Pennsylvania 57867</p>
+                        <div className='status'>
+                            <div>
+                                <p>150</p>
+                                <p>Total Order</p>
+                            </div>
+                            <div>
+                                <p>140</p>
+                                <p>Completed</p>
+                            </div>
+                            <div>
+                                <p>10</p>
+                                <p>Canceled</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="table-filter">
+                    <ul>
+                        <li className='active'>All Orders</li>
+                        <li>Completed</li>
+                        <li>Canceled</li>
+                    </ul>
+                </div>
+            </div>
         </section>
     )
 }
