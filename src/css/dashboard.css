@@ -319,6 +319,55 @@
   margin-bottom: 30px;
 }
 
+.dashboard .table-sort-filter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+.dashboard .table-sort-filter div {
+  display: inline-block;
+}
+
+.dashboard .table-sort-filter select,
+.dashboard .table-sort-filter input {
+  height: 40px;
+  color: var(--gray);
+  outline: none;
+  border: 1px solid var(--border-gray);
+  margin-right: 14px;
+  padding: 5px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.dashboard .table-sort-filter .search-filter {
+  position: relative;
+  margin-right: 0;
+}
+
+.dashboard .table-sort-filter .search-filter input {
+  min-width: 200px;
+  margin: 0;
+}
+
+.dashboard .table-sort-filter .search-filter svg {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dashboard .table-sort-filter div:last-child .e-input-group {
+  font-family: inherit;
+  border: 1px solid var(--border-gray) !important;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: var(--white);
+  font-size: 15px;
+}
+
+/* Main Table Content  */
 .dashboard .customer-table .table-wrapper {
   background: var(--white);
   padding: 8px 16px;
@@ -351,13 +400,52 @@
   line-height: 22px;
 }
 
-.dashboard .customer-table table .Pending {
+.dashboard .customer-table table .completed,
+.dashboard .customer-table table .canceled,
+.dashboard .customer-table table .pending {
   color: var(--yellow);
   font-weight: 600;
 }
 
+.dashboard .customer-table table .completed {
+  color: var(--green);
+}
+
+.dashboard .customer-table table .canceled {
+  color: var(--red);
+}
+
 .dashboard .customer-table table td a {
   color: var(--primary-color);
+}
+
+/* Pagination  */
+.dashboard .table-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard .table-footer .entries {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard .table-footer .entries p {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 17.63px;
+  color: var(--gray);
+}
+
+.dashboard .table-footer .entries select {
+  margin: 0 8px;
+  width: 65px;
+  height: 38px;
+  text-align: center;
+  border-color: var(--border-gray);
+  border-radius: 6px;
+  color: var(--dark);
 }
 
 /* Pagination  */
