@@ -1,3 +1,4 @@
+/* Statictic section */
 .dashboard .statistic {
   display: flex;
   flex: 1;
@@ -7,7 +8,7 @@
 .dashboard .statistic .card {
   max-height: 199px;
 }
-
+/* Total Sales  */
 .dashboard .total-sales {
   max-width: 398px;
   display: flex;
@@ -59,6 +60,7 @@
   transform: translateY(3px);
 }
 
+/* Total Profit  */
 .dashboard .total-profit {
   padding: 21px 0 24px 24px;
   max-width: 242px;
@@ -109,6 +111,7 @@
   transform: translateY(3px);
 }
 
+/* Countries  */
 .dashboard .countries {
   padding: 24px;
 }
@@ -177,6 +180,7 @@
   color: var(--red);
 }
 
+/* Info Section  */
 .dashboard .info.card {
   margin-top: 16px;
   padding: 24px 24px 0;
@@ -187,6 +191,7 @@
   padding: 0 15px;
 }
 
+/* Profile  */
 .dashboard .personal-information .profile {
   display: flex;
   align-items: center;
@@ -230,6 +235,7 @@
   line-height: 22px;
 }
 
+/* Information  */
 .dashboard .personal-information .information {
   padding-left: 23px;
   min-width: 356px;
@@ -254,6 +260,7 @@
   width: 116px;
 }
 
+/* Shipping  */
 .dashboard .personal-information .shipping {
   flex: 1;
   padding: 0 24px;
@@ -270,7 +277,7 @@
   margin-bottom: 16px;
 }
 
-.dashboard .personal-information .status {
+.dashboard .personal-information .shipping .status {
   display: flex;
   justify-content: space-between;
   margin-top: 26px;
@@ -287,6 +294,7 @@
   margin-top: 8px;
 }
 
+/* Table Filter  */
 .dashboard .table-filter ul {
   display: flex;
   margin-top: 4px;
@@ -304,4 +312,81 @@
 .dashboard .table-filter ul li.active {
   color: var(--primary-color);
   border-color: var(--primary-color);
+}
+
+/* Customer Table  */
+.dashboard .customer-table {
+  margin-bottom: 30px;
+}
+
+.dashboard .customer-table .table-wrapper {
+  background: var(--white);
+  padding: 8px 16px;
+  margin-top: 22px;
+  border-radius: 16px;
+}
+
+.dashboard .customer-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dashboard .customer-table table td,
+.dashboard .customer-table table th {
+  text-align: left;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-gray);
+}
+
+.dashboard .customer-table table th {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 15.28px;
+  color: var(--gray);
+}
+
+.dashboard .customer-table table td {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.dashboard .customer-table table .Pending {
+  color: var(--yellow);
+  font-weight: 600;
+}
+
+.dashboard .customer-table table td a {
+  color: var(--primary-color);
+}
+
+/* Pagination  */
+.dashboard .pagination {
+  display: flex;
+  justify-content: flex-end;
+  padding: 21px 15px;
+}
+
+.dashboard .pagination .page-item {
+  font-size: 13px;
+  font-weight: 400;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
+  background: var(--pagination-button-background);
+  margin: 2px;
+  color: var(--gray);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dashboard .pagination .page-item.active {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.dashboard .pagination .page-item svg {
+  line-height: 32px;
+  margin-top: 5px;
 }

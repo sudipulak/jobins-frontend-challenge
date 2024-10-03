@@ -1,6 +1,6 @@
 .sidebar {
   width: 260px;
-  height: 100vh;
+  height: auto;
   background: var(--white);
   margin-right: 26px;
 }

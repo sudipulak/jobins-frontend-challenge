@@ -13,6 +13,8 @@
   --red: #ea5455;
   --yellow: #ffc600;
   --purple: #7367f0;
+
+  --pagination-button-background: #f1f2f6;
 }
 
 * {
@@ -23,6 +25,7 @@
   font-optical-sizing: auto;
   list-style: none;
   transition: all 0.3s;
+  box-sizing: border-box;
 }
 
 body {

@@ -1,3 +1,7 @@
+import { useState } from 'react'
+// Mock Data 
+import mockData from '@/MOCK_DATA.json'
+// Assets Import 
 import totalSalesImage from '@/assets/business-and-finance.png'
 import totalProfitImage from '@/assets/yen.png'
 import USflag from '@/assets/us.png'
@@ -6,9 +10,36 @@ import Australiaflag from '@/assets/australia.png'
 
 
 const Dashboard = () => {
+    const [currentPage, setCurrentPage] = useState(1);
+    // Pagination variables 
+    const recordsPerPage = 5;
+    const lastIndex = currentPage * recordsPerPage;
+    const firstIndex = lastIndex - recordsPerPage;
+    const datas = mockData.slice(firstIndex, lastIndex);
+    const totalPages = Math.ceil(mockData.length / recordsPerPage);
+    const numbers = [...Array(totalPages + 1).keys()].slice(1);
+    // Pagination Previous Function 
+    const prevPage = (e) => {
+        if (currentPage !== 1) {
+            setCurrentPage(currentPage - 1);
+        }
+        e.preventDefault();
+    }
+    // Pagination Number Function 
+    const changeCurrentPage = (id) => {
+        setCurrentPage(id)
+    }
+    // Pagination Next Function
+    const nextPage = () => {
+        if (currentPage !== totalPages) {
+            setCurrentPage(currentPage + 1);
+        }
+    }
     return (
         <section className="dashboard">
+            {/* Stastitic section   */}
             <div className="statistic">
+                {/* Total Sales Card  */}
                 <div className="card total-sales">
                     <div className="card-img-wrapper">
                         <div className="img-box">
@@ -26,6 +57,7 @@ const Dashboard = () => {
                             8.56K</span> vs last 7 days</p>
                     </div>
                 </div>
+                {/* Total Profit Card  */}
                 <div className="card total-profit">
                     <div className="card-img-wrapper">
                         <div className="img-box">
@@ -43,6 +75,7 @@ const Dashboard = () => {
                         </svg>12%</span> vs last 7 days</p>
                     </div>
                 </div>
+                {/* Countries Card  */}
                 <div className="card countries">
                     <ul>
                         <li>
@@ -99,8 +132,10 @@ const Dashboard = () => {
                     </ul>
                 </div>
             </div>
+            {/* Info Section  */}
             <div className="info card">
                 <div className="personal-information">
+                    {/* Profile  */}
                     <div className='profile'>
                         <div className="img-box"></div>
                         <div className="description">
@@ -108,12 +143,14 @@ const Dashboard = () => {
                             <p>robert@gmail.com</p>
                         </div>
                     </div>
+                    {/* Information  */}
                     <div className='information'>
                         <p>PERSONAL INFORMATION</p>
                         <p><span>Contact Number</span><b>(201) 555-0124</b></p>
                         <p><span>Date of Birth</span><b>1 Jan, 1985</b></p>
                         <p><span>Member Since</span><b>3 March, 2023</b></p>
                     </div>
+                    {/* Shipping  */}
                     <div className='shipping'>
                         <p className='title'>Shipping Address</p>
                         <p>3517 W. Gray St. Utica, Pennsylvania 57867</p>
@@ -133,12 +170,71 @@ const Dashboard = () => {
                         </div>
                     </div>
                 </div>
+                {/* Table Filter  */}
                 <div className="table-filter">
                     <ul>
                         <li className='active'>All Orders</li>
                         <li>Completed</li>
                         <li>Canceled</li>
                     </ul>
+                </div>
+            </div>
+            {/* Customer Table Section  */}
+            <div className="customer-table">
+                <div className="table-wrapper">
+                    {/* Table Section  */}
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>CUSTOMER</th>
+                                <th>DATE</th>
+                                <th>TOTAL</th>
+                                <th>METHOD</th>
+                                <th>STATUS</th>
+                                <th>ACTION</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {datas.map((data, i) => {
+                                return (
+                                    <tr key={i}>
+                                        <td>#{data.id}</td>
+                                        <td>{data.customer}</td>
+                                        <td>{data.date}</td>
+                                        <td>{data.total}</td>
+                                        <td>{data.method}</td>
+                                        <td className={data.status}>{data.status}</td>
+                                        <td>
+                                            <a href={data.action}>View Details</a>
+                                        </td>
+                                    </tr>
+                                )
+                            })}
+                        </tbody>
+                    </table>
+                    {/* Pagination  */}
+                    <nav>
+                        <ul className='pagination'>
+                            <li className='page-item' onClick={() => prevPage()}>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 4L6 8L10 12" stroke="#8B909A" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </li>
+                            {numbers.map((n, i) => {
+                                return (
+                                    <li className={`page-item ${currentPage === n ? 'active' : ''}`} key={i} onClick={() => changeCurrentPage(n)}>
+                                        {n}
+                                    </li>
+                                )
+                            })}
+                            <li className='page-item' onClick={() => nextPage()}>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 4L10 8L6 12" stroke="#8B909A" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </section>
