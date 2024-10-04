@@ -86,6 +86,7 @@ const Sidebar = () => {
                     <img src={MenuTogglerImg} alt="" />
                 </span>
             </div >
+            {/* Navigation Menu  */}
             <NavigationMenu />
         </aside >
     )

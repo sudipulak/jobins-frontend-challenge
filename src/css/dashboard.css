@@ -478,3 +478,47 @@
   line-height: 32px;
   margin-top: 5px;
 }
+
+@media screen and (max-width: 768px) {
+  .dashboard .statistic {
+    flex-wrap: wrap;
+  }
+
+  .dashboard .total-sales,
+  .dashboard .total-profit {
+    max-width: 100%;
+  }
+
+  .dashboard .info .personal-information {
+    flex-wrap: wrap;
+    min-width: 100%;
+  }
+
+  .dashboard .personal-information .profile,
+  .dashboard .personal-information .information,
+  .dashboard .personal-information .shipping {
+    width: 100%;
+    border-right: 0px;
+    border-bottom: 1px solid var(--border-gray);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+
+  .dashboard .table-sort-filter {
+    flex-wrap: wrap;
+  }
+
+  .dashboard .table-sort-filter div,
+  .dashboard .table-sort-filter select,
+  .dashboard .table-sort-filter input {
+    width: 100%;
+  }
+
+  .dashboard .customer-table .table-wrapper {
+    overflow-x: scroll;
+  }
+
+  .dashboard .customer-table .table-wrapper table {
+    min-width: 768px;
+  }
+}

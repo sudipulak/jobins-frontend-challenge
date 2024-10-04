@@ -91,8 +91,6 @@ const Dashboard = () => {
     const [recordsPerPage, setRecordsPerPage] = useState(5);
     const lastIndex = currentPage * recordsPerPage;
     const firstIndex = lastIndex - recordsPerPage;
-    // const datas = mockData.slice(firstIndex, lastIndex);
-    // const totalPages = Math.ceil(mockData.length / recordsPerPage);
     const datas = filteredData.slice(firstIndex, lastIndex);
     const totalPages = Math.ceil(filteredData.length / recordsPerPage);
     const numbers = [...Array(totalPages + 1).keys()].slice(1);
@@ -276,13 +274,14 @@ const Dashboard = () => {
                         </div>
                     </div>
                     <div>
-                        <select name="Date Filter" ref={dateRef} onChange={() => dateFilterHandle()}>
-                            <option value="none">Filter by date range</option>
+                        <select name="Date Filter" defaultValue='none' ref={dateRef} onChange={() => dateFilterHandle()}>
+                            <option value='none' disabled>Filter by date range</option>
                             <option value="asc">Ascending</option>
                             <option value="des">descending</option>
                         </select>
                     </div>
                 </div>
+                {/* Main Table Content  */}
                 <div className="table-wrapper">
                     {/* Table Section  */}
                     <table>

@@ -49,6 +49,10 @@ section {
   display: flex;
 }
 
+.content-wrapper {
+  width: calc(100% - 290px);
+}
+
 .card {
   width: 100%;
   background: var(--white);

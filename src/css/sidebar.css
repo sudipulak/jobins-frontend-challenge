@@ -1,8 +1,15 @@
 .sidebar {
   width: 260px;
   height: auto;
+  min-height: 100vh;
   background: var(--white);
   margin-right: 26px;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    min-width: fit-content;
+  }
 }
 
 .sidebar.hide {

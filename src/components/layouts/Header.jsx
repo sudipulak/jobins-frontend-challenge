@@ -10,10 +10,12 @@ const Header = () => {
         <header>
             <h1>{location.pathname === '/' ? 'Dashboard' : pageTitle}</h1>
             <div className="profile-box">
+                {/* Notification  */}
                 <div className="notification">
                     <img src={BellImg} alt="" />
                     <span>4</span>
                 </div>
+                {/* Profile  */}
                 <div className="profile">
                     <span className="active"></span>
                 </div>
