@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom"
-import BellImg from '@/assets/Bell.svg'
+import BellImg from '@/assets/bell.svg'
 
 const Header = () => {
     const location = useLocation();

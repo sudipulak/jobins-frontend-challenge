@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 // Compontents 
-import Layout from './components/layouts/Layout'
-import Dashboard from './pages/Dashboard'
-import OrderManagement from './pages/OrderManagement'
-import Brand from './pages/Brand'
-import AddProduct from './pages/AddProduct'
-import ProductList from './pages/ProductList'
+import Layout from '@/components/layouts/Layout'
+import Dashboard from '@/pages/Dashboard'
+import OrderManagement from '@/pages/OrderManagement'
+import Brand from '@/pages/Brand'
+import AddProduct from '@/pages/AddProduct'
+import ProductList from '@/pages/ProductList'
 
 function App() {
   return (
