@@ -55,6 +55,7 @@ section {
 @media screen and (max-width: 768px) {
   .content-wrapper {
     width: calc(100% - 290px);
+    overflow: hidden;
   }
 }
 
