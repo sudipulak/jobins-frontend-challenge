@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import Layout from './components/layouts/layout'
-import Dashboard from './pages/Dashboard'
-import OrderManagement from './pages/OrderManagement'
-import Brand from './pages/Brand'
-import AddProduct from './pages/AddProduct'
-import ProductList from './pages/ProductList'
+import Layout from '@/components/layouts/layout'
+import Dashboard from '@/pages/Dashboard'
+import OrderManagement from '@/pages/OrderManagement'
+import Brand from '@/pages/Brand'
+import AddProduct from '@/pages/AddProduct'
+import ProductList from '@/pages/ProductList'
 
 function App() {
   return (
