@@ -48,9 +48,14 @@ section {
 .main-wrapper {
   display: flex;
 }
-
 .content-wrapper {
-  width: calc(100% - 290px);
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .content-wrapper {
+    width: calc(100% - 290px);
+  }
 }
 
 .card {
